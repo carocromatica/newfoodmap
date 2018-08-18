@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PlanValpo</title>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css'
+    type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <header>
+    <p>PlanValpo</p>
+  </header>
+  <!---->
+  <div id="cafeDelPoeta" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Café del Poeta</h1>
+      <div>
+        <img src="img/cafepoeta.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
+    </div>
+  </div>
+
+  <!---->
+  <div id="benditaPasta" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Bendita Pasta</h1>
+      <div>
+        <img src="img/bendita.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
+    </div>
+  </div>
+  <!---->
+
+  <div id="emporioLaRosa" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Emporio La Rosa</h1>
+      <div>
+        <img src="img/emporio.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
+    </div>
+  </div>
+  <!---->
+
+  <div id="nazca" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Sazón Nazca</h1>
+      <div>
+        <img src="img/nazca.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
+    </div>
+  </div>
+  <!---->
+
+  <div id="cinzano" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Cinzano</h1>
+      <div>
+        <img src="img/cinzano.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
+    </div>
+  </div>
+  <!---->
+
+  <div id="mascara" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Máscara Pub</h1>
+      <div>
+        <img src="img/mascara.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="knibal" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Otro K-Nibal</h1>
+      <div>
+        <img src="img/knibal.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
+    </div>
+  </div>
+  <!---->
+
+  <div id='map'></div>
+  <div class="filtro">
+      <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Mostrar Todos</button>
+          <button class="btn" onclick="filterSelection('bar')"> Bar</button>
+          <button class="btn" onclick="filterSelection('cafe')">Café </button>
+          <button class="btn" onclick="filterSelection('rest')"> Restaurants</button>
+          <button class="btn" onclick="filterSelection('fast-food')"> Cómida Rápida</button>
+        </div>
+        
+        <div class="container">
+          <div class="filterDiv fast-food"><a href="#knibal">K-Nibal</a></div>
+          <div class="filterDiv bar"><a href="#mascara">Máscara</a></div>
+          <div class="filterDiv cafe">Café del poeta</div>
+          <div class="filterDiv cafe">Emporio la Rosa</div>
+          <div class="filterDiv bar rest">Cinzano</div>
+          <div class="filterDiv rest">Nazca</div>
+   
+        </div>
+        
+  </div>
+  <script src="map.js"></script>
+<script src="filter.js"></script>
+   
+</body>
+
+</html>
